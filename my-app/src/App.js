@@ -51,6 +51,10 @@ function App() {
           setMainText(textCopy)
           setTextarea('')
 
+          let goodCopy = [...good];
+          goodCopy.unshift(0);
+          setGood(goodCopy);
+
         }}>게시</button>
       </container>
 
