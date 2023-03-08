@@ -45,7 +45,6 @@ function App() {
           titleCopy.unshift(input); // 얕은 복사한 배열앞에 setInput state에 입력된 값을 넣어준다.
           setTitle(titleCopy) // [Title state] 를 [setTitle 함수] 를 이용하여 [새로운 값이 추가된 얕은 복사한 배열] 로 바꾸어준다.
           setInput('')
-          setInput.reset()
 
           let textCopy = [...mainText];
           textCopy.unshift(textarea);
@@ -60,8 +59,8 @@ function App() {
           return(
             <div>
             <h3 onClick={()=>{let copyModal = [...modal]
-                                  copyModal[i] = !copyModal[i]
-                                  setModal(copyModal)}}>{ title[i] }</h3>
+                              copyModal[i] = !copyModal[i]
+                              setModal(copyModal)}}>{ title[i] }</h3>
             <GoodButton
             onClick={()=>{let copyGood = [...good]
                               copyGood[i]++
@@ -85,7 +84,6 @@ function Modal( {title , mainText , i , setTitle } ) {
   return(
     <MainModal>
       <h4>{title[i]}</h4>
-      <p>날짜</p>
       <p>{mainText[i]}</p>
       <button onClick={()=>{
         let copy = [...title];
